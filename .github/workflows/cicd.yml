@@ -11,20 +11,25 @@ jobs:
       matrix:
         python-version: [3.11]
     steps:
+      # Checkout repository
       - uses: actions/checkout@v3
 
+      # Setup Python 3.11
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
 
+      # Install dependencies
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # Run tests
       - name: Run tests
         run: pytest
 
+      # Build Docker image
       - name: Build Docker Image
         run: docker build -t ml-app .
