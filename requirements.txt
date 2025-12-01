@@ -1,7 +1,7 @@
 # Core dependencies
 fastapi==0.100.0
 uvicorn[standard]==0.22.0
-onnxruntime==1.16.0
+onnxruntime==1.17.3
 numpy==1.26.3
 pydantic==2.5.2
 
