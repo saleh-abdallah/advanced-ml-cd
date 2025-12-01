@@ -3,7 +3,8 @@ uvicorn[standard]==0.22.0
 onnxruntime==1.17.3
 numpy==1.26.3
 pydantic==2.5.2
-starlette==0.30.1
-httpx==0.28.1
+
+# Testing / dev
 pytest==7.4.2
+httpx==0.28.1
 pytest-asyncio==0.22.0
