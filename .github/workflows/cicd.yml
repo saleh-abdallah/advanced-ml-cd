@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.11]  # match your local version
+        python-version: [3.12]  # match your local version
     steps:
       - uses: actions/checkout@v3
 
