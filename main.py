@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import onnxruntime as ort
 
 app = FastAPI()
-session = ort.InferenceSession("model.onnx")
+session = ort.InferenceSession("model.onnx", providers=['AzureExecutionProvider', 'CPUExecutionProvider'])
 
 @app.get("/")
 def health():
